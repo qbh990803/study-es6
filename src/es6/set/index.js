@@ -86,3 +86,27 @@ const differenceSetArr1 = [1, 2, 3];
 const differenceSetArr2 = [2, 3];
 const differenceSetArr = differenceSetArr1.filter(item => !(new Set(differenceSetArr2).has(item)));
 console.log(differenceSetArr);
+
+
+
+// 遍历
+const traverseTest = new Set(['hello', 'es6']);
+
+// keys 返回键名的遍历器
+console.log(traverseTest.keys());
+
+// values 返回键值的遍历器
+console.log(traverseTest.values());
+
+// entries 返回键值对的遍历器
+console.log(traverseTest.entries());
+
+// forEach 使用回调函数遍历每个成员
+traverseTest.forEach(element => {
+  console.log(element);
+});
+
+// for of 可以直接遍历每个成员
+for (const iterator of traverseTest) {
+  console.log(iterator);
+}
